@@ -52,41 +52,17 @@ class FormularioAutor extends Component {
 
 	render() {
 		return (
-			  <div id='layout'>
-			  	<a href='#menu' id='menuLink' className='menu-link'>
-			  		<span></span>
-			  	</a>
-
-			  	<div id="menu">
-			        <div className="pure-menu">
-			            <a className="pure-menu-heading" href="#">Company</a>
-			            <ul className="pure-menu-list">
-			                <li className="pure-menu-item"><a href="#" className="pure-menu-link">Home</a></li>
-			                <li className="pure-menu-item"><a href="#" className="pure-menu-link">Autor</a></li>
-			                <li className="pure-menu-item"><a href="#" className="pure-menu-link">Livro</a></li>
-			            </ul>
-			        </div>
-				</div>
-
-				<div id="main">
-			        <div className="header">
-			          <h1>Cadastro de Autores</h1>
-			        </div>
-			        <div className="content" id="content">
-			          <div className="pure-form pure-form-aligned">
-			            <form className="pure-form pure-form-aligned" onSubmit={this.enviaForm} method="post">
-			              <InputCustomizado id="nome" type="text" name="nome" value={this.state.nome} onChange={this.setNome} label="Nome"/>
-			              <InputCustomizado id="email" type="email" name="email" value={this.state.email} onChange={this.setEmail} label="Email"/>
-			              <InputCustomizado id="senha" type="password" name="senha" value={this.state.senha} onChange={this.setSenha} label="Senha"/>
-			              <div className="pure-control-group">                                  
-			                <label></label> 
-			                <button type="submit" className="pure-button pure-button-primary">Gravar</button>                                    
-			              </div>
-			            </form>             
-			          </div>  
-			        </div>
-			    </div>
-			  </div>
+			  <div className="pure-form pure-form-aligned">
+	            <form className="pure-form pure-form-aligned" onSubmit={this.enviaForm} method="post">
+	              <InputCustomizado id="nome" type="text" name="nome" value={this.state.nome} onChange={this.setNome} label="Nome"/>
+	              <InputCustomizado id="email" type="email" name="email" value={this.state.email} onChange={this.setEmail} label="Email"/>
+	              <InputCustomizado id="senha" type="password" name="senha" value={this.state.senha} onChange={this.setSenha} label="Senha"/>
+	              <div className="pure-control-group">                                  
+	                <label></label> 
+	                <button type="submit" className="pure-button pure-button-primary">Gravar</button>                                    
+	              </div>
+	            </form>             
+	          </div>
 		);
 	}
 }
@@ -104,7 +80,7 @@ class TabelaAutores extends Component {
 	              </thead>
 	              <tbody>
 	              	{
-	              		this.state.lista.map(function(autor){
+	              		this.props.lista.map(function(autor){
 	              			return(
 	              				<tr key={autor.id}>
 				                  <td>{autor.nome}</td>                
