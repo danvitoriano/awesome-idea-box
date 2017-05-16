@@ -18,7 +18,7 @@ class FormularioLivro extends Component {
 	enviaForm(evento){
 		evento.preventDefault();
 		$.ajax({
-			url:'http://localhost:8080/api/livros',
+			url:'http://cdc-react.herokuapp.com/api/livros',
 			contentType:'application/json',
 			dataType:'json',
 			type:'post',
@@ -118,7 +118,7 @@ export default class LivroBox extends Component{
 	componentDidMount(){
 		console.log('didMount');
 		$.ajax({
-			url:'http://localhost:8080/api/livros',
+			url:'http://cdc-react.herokuapp.com/api/livros',
 			dataType:'json',
 			success:function(resposta){
 				console.log('chegou a resposta dos livros');
@@ -127,7 +127,7 @@ export default class LivroBox extends Component{
 		});
 
 		$.ajax({
-			url:'http://localhost:8080/api/autores',
+			url:'http://cdc-react.herokuapp.com/api/autores',
 			dataType:'json',
 			success:function(resposta){
 				console.log('chegou a resposta dos autores');
