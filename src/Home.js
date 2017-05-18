@@ -8,6 +8,7 @@ export default class Home extends Component{
 		          <h1>Oi Ideias</h1>
 		        </div>
 				<div className="content" id="content">
+				<p>Escolha postar uma ideia ou responder ideia</p>
 				</div>
 			</div>
 		);

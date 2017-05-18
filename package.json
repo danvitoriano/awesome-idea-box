@@ -1,7 +1,7 @@
 {
   "name": "awesome-idea-box",
   "homepage": "https://danvitoriano.github.io/awesome-idea-box/",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
     "jquery": "^3.2.1",
